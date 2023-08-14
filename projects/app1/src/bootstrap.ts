@@ -5,12 +5,14 @@ import { importProvidersFrom } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { APP_ROUTES } from './app/routes';
 
-bootstrapApplication(AppComponent, {
-  providers: [
-    importProvidersFrom(RouterModule.forRoot(APP_ROUTES))
-  ]
-});
+// bootstrapApplication(AppComponent, {
+//   providers: [
+//     importProvidersFrom(RouterModule.forRoot(APP_ROUTES))
+//   ]
+// });
 
+bootstrapApplication(AppComponent, appConfig)
+  .catch((err) => console.error(err));
 
 
 
